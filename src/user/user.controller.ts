@@ -5,7 +5,7 @@ import { userScheam } from "@/types";
 
 import { UserService } from "@/user/user.service";
 
-export class UserCotroller {
+export class UserController {
   public userService = new UserService();
 
   async createUser(req: Request, res: Response) {

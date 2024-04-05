@@ -1,6 +1,6 @@
 import { type Request, type Response } from "express";
 
-import { STATUS } from "@/core/utils/status";
+import { Messages, STATUS } from "@/core/utils/status";
 import { userScheam } from "@/types";
 
 import { UserService } from "@/user/user.service";
@@ -25,6 +25,19 @@ export class UserController {
           message: "",
         },
       });
+    }
+  }
+
+  async getUser(_: Request, res: Response) {
+    try {
+      res.status(STATUS.OK);
+      res.json({
+        data: "Hello",
+        error: null,
+      });
+    } catch (e) {
+      res.status(STATUS.INTERNAL_SERVER);
+      res.json(Messages.INTERNAL_SERVER);
     }
   }
 }

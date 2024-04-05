@@ -15,5 +15,6 @@ export class UserRoute implements Route {
 
   private intiRoute() {
     this.router.post(this.path, this.userController.createUser);
+    this.router.get(this.path, this.userController.getUser);
   }
 }

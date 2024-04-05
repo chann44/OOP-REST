@@ -1,8 +1,10 @@
-export class HttpException extends Error {
-  public status: number;
-  public message: string;
+import { Messages, STATUS } from "../utils";
 
-  constructor(status: number, message: string) {
+export class HttpException extends Error {
+  public status: STATUS;
+  public message: Messages;
+
+  constructor(status: STATUS, message: Messages) {
     super(message);
     this.status = status;
     this.message = message;

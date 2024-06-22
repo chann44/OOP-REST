@@ -1,5 +1,11 @@
-export const ERROR_MESSAGE = {
-  BAD_REQUEST: "req body missing frew properties",
-  INTERNAL_SERVER: "internal server error",
-  SUCCESS: "",
-};
+export enum ERROR_MESSAGE {
+  UNATHENTICATED = "You are unauthenticated",
+  SUCCESS = "success",
+  BAD_REQUEST = "bad request",
+  NOT_FOUND = "not found",
+  INTERNAL_SERVER = "internal server error",
+  UNAUTHORIZED = "unauthorized",
+  FORBIDDEN = "forbidden",
+  CONFLICT = "conflict",
+  TOO_MANY_REQUESTS = "too many requests",
+}

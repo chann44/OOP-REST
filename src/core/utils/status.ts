@@ -8,14 +8,3 @@ export enum STATUS {
   CONFLICT = 409,
   TOO_MANY_REQUESTS = 429,
 }
-
-export enum Messages {
-  SUCCESS = "success",
-  BAD_REQUEST = "bad request",
-  NOT_FOUND = "not found",
-  INTERNAL_SERVER = "internal server error",
-  UNAUTHORIZED = "unauthorized",
-  FORBIDDEN = "forbidden",
-  CONFLICT = "conflict",
-  TOO_MANY_REQUESTS = "too many requests",
-}

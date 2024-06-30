@@ -1,4 +1,3 @@
-import { Route } from "@/core/interface";
 import express, { type Application } from "express";
 import hpp from "hpp";
 import morgan from "morgan";
@@ -13,9 +12,9 @@ export default class App {
   public production: boolean;
   public db: DbService;
 
-  constructor(routes: Route[]) {
+  constructor(routes: any[]) {
     this.app = express();
-    this.port = process.env.PORT || 5000;
+    this.port = process.env.PORT || 8000;
     this.db = new DbService();
     this.production = process.env.NODE_ENV == "production" ? true : false;
 
@@ -31,7 +30,7 @@ export default class App {
       console.log("=====================================");
     });
   }
-  private initializeRoutes(routes: Route[]) {
+  private initializeRoutes(routes: any[]) {
     routes.forEach((route) => {
       this.app.use("/", route.router);
     });
